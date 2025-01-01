@@ -49,3 +49,4 @@ dist-ssr
 *.sln
 *.sw?
 >>>>>>> e3a5a96 (Initial commit)
+.env
