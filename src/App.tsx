@@ -1,7 +1,16 @@
-import TestComponent from "./components/TestComponent.tsx";
+import React from "react";
+import Header from "./components/Header/Header.tsx";
+import Footer from "./components/Footer/Footer.tsx";
+import Navbar from "./components/Navbar/Navbar.tsx";
 
-function App() {
-  return <>TestComponent</>;
-}
+const App: React.FC = () => {
+  return (
+    <div>
+      <Navbar />
+      <Header />
+      <Footer />
+    </div>
+  );
+};
 
 export default App;
