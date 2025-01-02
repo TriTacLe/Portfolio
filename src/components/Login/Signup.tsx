@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Validation from "./SignupValidation";
+import axios from "axios";
 
 const Signup: React.FC = () => {
   const [values, setValues] = useState({
@@ -10,9 +11,12 @@ const Signup: React.FC = () => {
   });
 
   interface Errors {
+    name?: string;
     email?: string;
     password?: string;
   }
+
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState<Errors>({});
 
@@ -26,6 +30,14 @@ const Signup: React.FC = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setErrors(Validation(values));
+    if (errors.name === "" && errors.email === "" && errors.password === "") {
+      axios
+        .post("http://localhost:8081/Personal/signup", values)
+        .then((res) => {
+          navigate("/");
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
