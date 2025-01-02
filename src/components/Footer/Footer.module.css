@@ -1,30 +1,104 @@
 body {
-  background-color: #1e1e1e;
+  background-color: hsl(0, 0%, 12%);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   list-style: none;
+  min-height: 100vh;
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #a8a8a8;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: auto;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: hsl(0, 0%, 8%);
+  background: linear-gradient(to right, hsl(0, 0%, 8%), hsla(0, 0%, 50%, 0.2));
+}
+
+h4 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #a8a8a8;
   font-size: 14px;
+}
+.footerSectionContact,
+.socialLinksContainer,
+.footerSectionNavigation {
+  padding: 10px;
+  flex: 1;
+}
+
+.footerSectionContact,
+.socialLinksContainer {
+  border-right: solid 1px hsla(0, 0%, 50%, 0.2); /* Dark gray, subtle */
+}
+
+.socialLinks {
+  display: flex;
+}
+
+.footerSectionContact p,
+.footerSectionContact a {
+  color: #a8a8a8;
+  transition: 0.3s ease;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.footerSectionContact p {
+  font-size: 12px;
+}
+
+.footerSectionContact a:hover {
+  color: hsl(0, 0%, 80%);
+  text-decoration: underline;
+}
+
+.footerSectionNavigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerSectionNavigation a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #a8a8a8;
+  transition: 0.3s ease;
+}
+
+.footerSectionNavigation li {
+  margin-bottom: 10px;
+}
+
+.footerSectionNavigation a:hover {
+  color: hsl(0, 0%, 80%);
+  text-decoration: underline;
 }
 
 .footerBottom {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  margin-top: auto; /* Pushes it to the bottom of the container */
   width: 100%;
-  font-size: 14px;
-  border: #1e1e1e solid 1px;
+  text-align: center;
+  border: solid 1px hsla(0, 0%, 35%, 0.8); /* Medium gray with slight transparency */
+  padding: 10px;
+  background-color: hsl(0, 0%, 8%);
+  color: #a8a8a8;
+}
+
+.footerBottom p {
+  flex: 1;
+  text-align: center;
+  margin: 0;
 }

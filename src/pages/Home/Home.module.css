@@ -1,0 +1,27 @@
+/* Ensure the body takes up full height and uses flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main content area should grow to fill available space */
+.mainContent {
+  flex: 1;
+}
+
+.home {
+  margin-top: 54px;
+  border: royalblue solid 1px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.homeText {
+  margin-top: 10px;
+  border: red solid 1px;
+}

@@ -16,7 +16,6 @@ interface SocialLink {
 }
 
 const Header: React.FC = () => {
-  // Array of social links
   const socialLinks: SocialLink[] = [
     {
       name: "Facebook",
