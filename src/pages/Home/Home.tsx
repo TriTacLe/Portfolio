@@ -81,11 +81,11 @@ const Home: React.FC = () => {
           <h1 className={styles.homeH1}>Welcome to my website</h1>
           <p className={styles.homeText}>
             Welcome to my portfolio! This simple yet dynamic website, built
-            using React and TypeScript, highlights my ability for creating
-            responsive, functional, and visually engaging web applications.
-            Here, you'll find examples of my work that showcase my skills. Take
-            a look around and feel free to reach out. I'd love to connect and
-            collaborate!
+            using React and TypeScript, with solely purpose to learn and
+            practice creating responsive, functional, and visually engaging web
+            applications. In this website, you'll find general information about
+            me. Take a look around and feel free to reach out. I'd love to
+            connect and collaborate!
           </p>
           <button className={styles.ctaButton}>Get in Touch</button>
         </div>

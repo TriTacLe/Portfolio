@@ -25,6 +25,7 @@ body {
   background-color: hsl(0, 0%, 8%);
   background: linear-gradient(to right, hsl(0, 0%, 8%), hsla(0, 0%, 50%, 0.2));
   width: 100%;
+  /*border: red solid 1px;*/
 }
 
 h4 {
@@ -32,18 +33,24 @@ h4 {
   margin-top: 10px;
   color: #a8a8a8;
   font-size: 14px;
+  /*border: red solid 1px;*/
 }
 .footerSectionContact,
 .socialLinksContainer,
 .footerSectionNavigation {
   flex: 1;
-  padding-left: 50px;
-  padding-right: 50px;
+  /*border: blue solid 1px;*/
 }
 
 .footerSectionContact,
 .socialLinksContainer {
   border-right: solid 1px hsla(0, 0%, 50%, 0.2); /* Dark gray, subtle */
+}
+
+.socialLinksContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 }
 
 .socialLinks {
