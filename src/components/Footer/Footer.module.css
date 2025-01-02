@@ -24,6 +24,7 @@ body {
   gap: 15px;
   background-color: hsl(0, 0%, 8%);
   background: linear-gradient(to right, hsl(0, 0%, 8%), hsla(0, 0%, 50%, 0.2));
+  width: 100%;
 }
 
 h4 {
@@ -35,8 +36,9 @@ h4 {
 .footerSectionContact,
 .socialLinksContainer,
 .footerSectionNavigation {
-  padding: 10px;
   flex: 1;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .footerSectionContact,
@@ -89,7 +91,6 @@ h4 {
 .footerBottom {
   position: relative;
   margin-top: auto; /* Pushes it to the bottom of the container */
-  width: 100%;
   text-align: center;
   border: solid 1px hsla(0, 0%, 35%, 0.8); /* Medium gray with slight transparency */
   padding: 10px;
