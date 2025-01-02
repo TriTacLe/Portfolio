@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
   gap: 15px;
   background-color: hsl(0, 0%, 8%);
-  background: linear-gradient(to right, hsl(0, 0%, 8%), hsla(0, 0%, 50%, 0.2));
+  background: linear-gradient(to right, hsl(0, 0%, 2%), hsla(0, 0%, 2%, 0.8));
   width: 100%;
   /*border: red solid 1px;*/
 }
@@ -39,18 +39,19 @@ h4 {
 .socialLinksContainer,
 .footerSectionNavigation {
   flex: 1;
+  padding-top: 40px;
   /*border: blue solid 1px;*/
 }
 
 .footerSectionContact,
 .socialLinksContainer {
-  border-right: solid 1px hsla(0, 0%, 50%, 0.2); /* Dark gray, subtle */
+  border-right: solid 1px hsla(0, 0%, 50%, 0.2);
 }
 
 .socialLinksContainer {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .socialLinks {

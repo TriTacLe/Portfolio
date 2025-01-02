@@ -7,7 +7,6 @@ const About: React.FC = () => {
   return (
     <div>
       <Header />
-      <div className={styles.mainContent}></div>
       <Footer />
     </div>
   );

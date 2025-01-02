@@ -10,6 +10,10 @@ body {
   color: hsl(0, 0%, 92%);
 }
 
+.homeContainer {
+  background-color: hsl(0, 0%, 8%, 0.8);
+}
+
 .mainContent {
   flex: 1;
   display: flex;
@@ -64,6 +68,7 @@ button.ctaButton:hover {
   border: solid 1px #121212;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .frontPageTextContainer,

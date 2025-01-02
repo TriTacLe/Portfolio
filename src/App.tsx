@@ -5,6 +5,7 @@ import About from "./pages/About/About";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
+import Personal from "./pages/Personal/Personal";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,8 @@ const App: React.FC = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/personal/*" element={<Personal />} />{" "}
+        {/* Wildcard for nested routes */}
       </Routes>
     </Router>
   );

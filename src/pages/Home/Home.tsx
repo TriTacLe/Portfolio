@@ -46,7 +46,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className={styles.homeContainer}>
       <Header />
       <div className={styles.frontPageContainer}>
         <div className={styles.frontPageTextContainer}>
