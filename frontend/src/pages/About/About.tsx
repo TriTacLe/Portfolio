@@ -5,8 +5,12 @@ import Footer from "../../components/Footer/Footer.tsx";
 
 const About: React.FC = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
+      <div className={styles.content}>
+        <p>About Page Content</p>
+      </div>
+
       <Footer />
     </div>
   );
