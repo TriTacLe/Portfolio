@@ -2,12 +2,278 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
 }
 
 .content {
-  flex: 1; /* Ensures this section takes up all available space between header and footer */
+  flex: 1;
+  background-color: #1a1a1a;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-footer {
-  margin-top: auto; /* Pushes footer to the bottom of the container */
+.introContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; /* Adds more spacing between the image and text */
+}
+
+.introP {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  background-color: #222222;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.CVlink {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.CVlink:hover {
+  color: #e67e22;
+}
+.introImgContainer {
+  width: 500px;
+  height: 41vh;
+  background-color: hsl(0, 0%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #555;
+  font-size: 16px;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.introImage {
+  max-width: 300px;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+  object-fit: cover; /* Keeps aspect ratio */
+}
+.h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+.h2 {
+  font-size: 2rem;
+  color: #f39c12;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.skills {
+  margin: 25px;
+}
+
+.skillGrid {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h2TechStack {
+  text-align: left;
+  width: 95%;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 2rem;
+  color: #f39c12;
+  font-weight: 600;
+}
+
+.techSkillsContainer {
+  display: flex;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.skillCategory {
+  border-radius: 10px;
+  background-color: hsl(0, 8%, 16%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  width: 250px;
+  max-width: fit-content;
+  height: auto;
+}
+
+.skillCategory h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #f39c12;
+}
+.skillCategory ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skillCategory ul li {
+  flex: 1 1 auto;
+  max-width: max-content;
+  padding: 10px;
+  text-align: center;
+  background-color: hsl(0, 8%, 20%);
+  border-radius: 5px;
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skillCategory ul li:hover {
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+  background-color: #f39c12;
+  color: #000;
+}
+
+.interestSection {
+}
+
+.interestContainer {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 13%);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+}
+
+.interestContainer h2 {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+.interestContainer ul {
+  display: flex;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  align-items: center;
+}
+
+.interestContainer ul li {
+  text-align: center;
+}
+
+.interestImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  margin-left: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: #2f2a2a;
+  border: 1px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+}
+
+.cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ctaContainer {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 92, 92, 0.9),
+    rgba(255, 162, 0, 0.9)
+  );
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Adds a deeper shadow for better contrast */
+  padding: 30px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.ctaContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ctaContainer p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  background-color: #16a085;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

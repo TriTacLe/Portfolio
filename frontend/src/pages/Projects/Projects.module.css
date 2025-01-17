@@ -1,0 +1,13 @@
+/* Wraps the entire page content */
+.pageWrapper {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh; /* Ensures the wrapper covers the full viewport height */
+}
+
+/* The main content area */
+.projectContainer {
+  border: 1px solid red;
+  background-color: hsl(0, 0%, 8%);
+  flex-grow: 1; /* Ensures this area takes up available space */
+}

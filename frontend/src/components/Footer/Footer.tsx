@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+
 import {
   FaFacebookSquare,
   FaTwitterSquare,
@@ -62,19 +64,13 @@ const Footer: React.FC = () => {
           <h4>SITE LINKS</h4>
           <ul>
             <li>
-              <a href="home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
+              <Link to="/projects">Projects</Link>
             </li>
           </ul>
         </div>
