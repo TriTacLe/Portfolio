@@ -11,7 +11,7 @@ li {
 .navbarHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space between logo and nav */
+  justify-content: space-between;
   width: 100%;
   background-color: rgba(18, 18, 18, 0.8);
   padding: 10px 20px;
@@ -19,12 +19,24 @@ li {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.4s ease-out;
 }
 
 .navbarBlur {
   backdrop-filter: blur(10px); /* Apply blur */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow when blurred */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: shrinkHeader 0.3s ease-in-out;
+}
+
+@keyframes shrinkHeader {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.98);
+  }
 }
 
 /* Logo Styling */
@@ -32,6 +44,21 @@ li {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logoImage:hover {
+  animation: spin 0.8s ease-in-out;
+  transform: translateY(-2px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Navbar Container */
@@ -52,26 +79,31 @@ li {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #a8a8a8;
+  color: hsl(210, 10%, 85%);
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: color 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
 }
 
 .navbarLink:hover {
-  color: hsl(0, 0%, 46%);
-  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 69%, 43%);
+  background-color: rgba(136, 42, 42, 0.1);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Active Link Styling */
 .activeLink {
-  color: hsl(0, 0%, 75%);
+  color: hsl(0, 69%, 43%);
   font-weight: bold;
-  border-bottom: solid 2px hsl(0, 0%, 55%);
-  transition: border-bottom 0.3s ease, color 0.3s ease;
+  background: linear-gradient(135deg, #32617a, #941919);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid hsl(0, 58%, 42%);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Design */
@@ -95,5 +127,15 @@ li {
   .navbarLink {
     font-size: 16px;
     padding: 10px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

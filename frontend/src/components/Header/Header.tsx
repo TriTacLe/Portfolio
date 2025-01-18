@@ -44,7 +44,10 @@ const Header: React.FC = () => {
         isScrolled ? styles.navbarBlur : ""
       }`}
     >
-      <img className={styles.logoImage} src={Logo} alt="Logo" />
+      <Link to="/">
+        <img className={styles.logoImage} src={Logo} alt="Logo" />
+      </Link>
+
       <nav className={styles.navbarContainer}>
         <ul className={styles.navbar}>
           {navLinks.map((link) => (

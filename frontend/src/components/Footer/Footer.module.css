@@ -1,38 +1,27 @@
-body {
-  background-color: hsl(0, 0%, 12%);
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  min-height: 100vh;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
-  color: #a8a8a8;
-  box-sizing: border-box;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  margin-top: auto;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f0f1e);
+  color: hsl(210, 10%, 85%);
+  box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
 }
 
 .footerContent {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
-  background-color: hsl(0, 0%, 8%);
-  background: linear-gradient(to right, hsl(0, 0%, 2%), hsla(0, 0%, 2%, 0.8));
-  width: 100%;
+  gap: 20px;
+  border-bottom: 1px solid hsla(0, 0%, 50%, 0.2);
+  padding-bottom: 20px;
   /*border: red solid 1px;*/
 }
 
 h4 {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  color: #a8a8a8;
-  font-size: 14px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: hsl(210, 15%, 95%);
+  text-transform: uppercase;
   /*border: red solid 1px;*/
 }
 .footerSectionContact,
@@ -60,8 +49,9 @@ h4 {
 
 .footerSectionContact p,
 .footerSectionContact a {
-  color: #a8a8a8;
-  transition: 0.3s ease;
+  color: hsl(210, 10%, 85%);
+  font-size: 14px;
+  transition: color 0.3s ease;
   text-decoration: none;
   margin: 10px;
 }
@@ -92,7 +82,7 @@ h4 {
 }
 
 .footerSectionNavigation a:hover {
-  color: hsl(0, 0%, 80%);
+  color: hsl(210, 15%, 95%);
   text-decoration: underline;
 }
 
@@ -102,12 +92,35 @@ h4 {
   text-align: center;
   border: solid 1px hsla(0, 0%, 35%, 0.8); /* Medium gray with slight transparency */
   padding: 10px;
-  background-color: hsl(0, 0%, 8%);
-  color: #a8a8a8;
+  font-size: 12px;
+  color: hsl(210, 10%, 75%);
+  border-top: 1px solid hsla(0, 0%, 50%, 0.2);
 }
 
 .footerBottom p {
   flex: 1;
   text-align: center;
   margin: 0;
+}
+
+.socialLinksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  font-size: 30px;
+  color: hsl(210, 15%, 80%);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.3);
+  color: hsl(210, 15%, 95%);
 }

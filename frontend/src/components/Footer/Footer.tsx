@@ -25,28 +25,40 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookSquare style={{ ...iconStyle, color: "#4267B2" }} />
+              <FaFacebookSquare
+                className={styles.socialIcon}
+                style={{ ...iconStyle, color: "#4267B2" }}
+              />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitterSquare style={{ ...iconStyle, color: "#1DA1F2" }} />
+              <FaTwitterSquare
+                className={styles.socialIcon}
+                style={{ ...iconStyle, color: "#1DA1F2" }}
+              />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin style={{ ...iconStyle, color: "#0077B5" }} />
+              <FaLinkedin
+                className={styles.socialIcon}
+                style={{ ...iconStyle, color: "#0077B5" }}
+              />
             </a>
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithubSquare style={{ ...iconStyle, color: "#000" }} />
+              <FaGithubSquare
+                className={styles.socialIcon}
+                style={{ ...iconStyle, color: "#000" }}
+              />
             </a>
           </div>
         </div>
