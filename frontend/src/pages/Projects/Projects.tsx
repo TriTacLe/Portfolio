@@ -15,7 +15,7 @@ const projects = [
     title: "This website",
     description: "A simple website made using react framework with typescript",
     image: "/src/assets/portfolio.png",
-    link: "#",
+    link: "https://github.com/TriTacLe/my-website-project",
   },
   {
     title: "Soon...",
