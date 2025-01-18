@@ -1,86 +1,108 @@
 .pageWrapper {
   position: relative;
-  min-height: 100vh; /* Ensures the wrapper takes up the full height of the viewport */
-  background-color: hsl(0, 4%, 15%);
+  min-height: 100vh;
+  background: radial-gradient(circle, #0f0f1e, #1a1a2e, #0d0d1b);
+  color: hsl(210, 15%, 90%);
+  font-family: "Poppins", sans-serif;
 }
 
 .projectsContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  color: white;
+  padding: 40px 20px;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
   margin-bottom: 30px;
+  text-transform: uppercase;
+  color: hsl(210, 20%, 95%);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #1a1a1a;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
-  min-height: 300px;
-  /*border: red 1px solid;*/
+  min-height: 340px;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .image {
   width: 100%;
-  height: 40%;
-  color: black;
-  background-color: lightblue;
-  display: block;
+  height: 200px;
+  background: #16213e;
   object-fit: cover;
-  font-size: 0.9rem;
-  /*border: 1px red solid;*/
 }
 
 .cardContent {
   flex: 1;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  /*border: red 1px solid;*/
+  padding: 20px;
+  color: hsl(210, 15%, 85%);
 }
 
 .cardTitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: hsl(210, 20%, 95%);
 }
 
 .cardDescription {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 15px;
+  color: hsl(210, 10%, 75%);
 }
 
 .cardButton {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3498db;
+  background: linear-gradient(90deg, #300f53, #183567);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cardButton:hover {
-  background-color: #2980b9;
+  background: linear-gradient(90deg, #2b1246, #1a4286);
+  transform: translateY(-2px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .grid {
+    gap: 15px;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
 }

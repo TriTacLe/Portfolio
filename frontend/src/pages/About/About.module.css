@@ -2,20 +2,18 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: #0f0f0f;
-  color: #e0e0e0;
+  background: radial-gradient(circle, #1a1a2e, #0f0f1e);
+  color: hsl(210, 10%, 88%);
   font-family: "Poppins", sans-serif;
 }
 
 .content {
   flex: 1;
-  background-color: #1a1a1a;
   margin: 30px;
   padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #1f4068, #16213e);
   border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
 .introContent {
@@ -27,37 +25,40 @@
 .introP {
   line-height: 1.8;
   font-size: 1.1rem;
-  color: #dcdcdc;
-  background-color: #222222;
-  padding: 15px;
+  color: hsl(210, 15%, 85%);
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
   margin: 0 auto;
   width: 80%;
+  flex: 1;
 }
 
 .CVlink {
-  color: #f39c12;
+  color: hsl(40, 90%, 60%);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease; /* Smooth color change */
+  transition: color 0.3s ease;
 }
 
 .CVlink:hover {
-  color: #e67e22;
+  color: hsl(40, 90%, 70%);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
+
 .introImgContainer {
   width: 500px;
-  height: 41vh;
-  background-color: hsl(0, 0%, 10%);
+  height: 338px;
+  background: hsl(210, 10%, 10%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
   color: #555;
   font-size: 16px;
   overflow: hidden;
-  border: 1px solid red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
 }
 
 .introImage {
@@ -69,8 +70,8 @@
 }
 .h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #f1c40f;
+  color: hsl(210, 15%, 95%);
+  text-align: center;
   margin-bottom: 15px;
 }
 
@@ -82,19 +83,20 @@
 }
 
 .skills {
-  margin: 25px;
+  margin: 40px 0;
 }
 
 .skillGrid {
-  background-color: #333;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 }
 
 .h2TechStack {
@@ -122,9 +124,11 @@
 
 .skillCategory {
   border-radius: 10px;
-  background-color: hsl(0, 8%, 16%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: hsl(210, 10%, 88%);
   padding: 20px;
+  padding-top: 0;
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
@@ -136,8 +140,8 @@
 
 .skillCategory h4 {
   margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #f39c12;
+  font-size: 1.4rem;
+  color: hsl(40, 90%, 60%);
 }
 .skillCategory ul {
   display: flex;
@@ -163,20 +167,20 @@
 }
 
 .skillCategory ul li:hover {
-  transform: scale(1.05); /* Slightly enlarges the item on hover */
-  background-color: #f39c12;
-  color: #000;
+  background: hsl(40, 90%, 60%);
+  color: hsl(210, 10%, 10%);
+  transform: scale(1.05);
 }
 
 .interestSection {
 }
 
 .interestContainer {
-  margin: 0;
-  padding: 0;
-  background-color: hsl(0, 0%, 13%);
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 .interestContainer h2 {
@@ -187,15 +191,9 @@
 
 .interestContainer ul {
   display: flex;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Responsive grid */
   flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  gap: 50px;
-  padding: 20px;
-  align-items: center;
 }
 
 .interestContainer ul li {
@@ -211,8 +209,8 @@
   margin-left: 10px;
   object-fit: cover;
   border-radius: 5px;
-  background-color: #2f2a2a;
-  border: 1px solid red;
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
 }
 
@@ -222,18 +220,17 @@
 }
 
 .ctaContainer {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 92, 92, 0.9),
-    rgba(255, 162, 0, 0.9)
-  );
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #020306);
   border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Adds a deeper shadow for better contrast */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   padding: 30px;
-  color: white;
-  max-width: 600px;
-  margin: 0 auto;
+  color: hsl(210, 15%, 90%);
+  max-width: 700px;
+  margin: 40px auto;
   animation: fadeIn 1s ease-in-out;
+  font-family: "Poppins", Arial, sans-serif;
+  text-align: center;
+  line-height: 1.8;
 }
 
 .ctaContainer h2 {
@@ -250,7 +247,7 @@
 
 .ctaButton {
   padding: 15px 30px;
-  background-color: #1abc9c;
+  background-color: #1c2a3c;
   color: white;
   border: none;
   border-radius: 30px;
@@ -261,7 +258,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #16a085;
+  background-color: #151d1b;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }

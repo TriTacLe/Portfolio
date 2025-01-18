@@ -25,7 +25,7 @@ body {
   max-width: 80%;
   margin: 20px auto;
   padding: 30px;
-  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #020306);
+  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   color: hsl(210, 10%, 88%);

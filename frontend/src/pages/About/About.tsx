@@ -26,9 +26,7 @@ const About: React.FC = () => {
               variety of securities, including bonds, ETFs, stocks, and
               cryptocurrencies. My professional experience started early,
               selling newspapers at the age of 11, and since then, I have gained
-              hands-on experience in various fields. This diverse background has
-              given me valuable insights and skills, complementing my academic
-              and personal pursuits.{" "}
+              hands-on experience in various fields.{" "}
               <Link
                 className={styles.CVlink}
                 to="https://docs.google.com/document/d/1NhuRIhe-wEkKiCUD4MJ_VO8M5Xzm3Pzq1qL8cCCWRpk/edit?usp=sharing"
@@ -38,7 +36,7 @@ const About: React.FC = () => {
             </p>
             <div className={styles.introImgContainer}>
               <img
-                src="src/assets/"
+                src="src/assets/selfie.jpg"
                 alt="Picture"
                 className={styles.introImage}
               />
@@ -90,7 +88,7 @@ const About: React.FC = () => {
             <ul>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Piano" />
+                  <img src="src/assets/piano.png" alt="Piano" />
                 </div>
                 Piano
               </li>
@@ -108,15 +106,33 @@ const About: React.FC = () => {
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Investing" />
+                  <img src="src/assets/antony.png" alt="Investing" />
                 </div>
                 Investing
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Coding" />
+                  <img src="src/assets/antony.png" alt="Coding" />
                 </div>
                 Software developing
+              </li>
+              <li>
+                <div className={styles.interestImgContainer}>
+                  <img src="src/assets/surfing.png" alt="Surfing" />
+                </div>
+                Surfing
+              </li>
+              <li>
+                <div className={styles.interestImgContainer}>
+                  <img src="src/assets/" alt="Backpacking" />
+                </div>
+                Backpacking
+              </li>
+              <li>
+                <div className={styles.interestImgContainer}>
+                  <img src="src/assets/caving.png" alt="Caving" />
+                </div>
+                Caving
               </li>
             </ul>
           </div>
