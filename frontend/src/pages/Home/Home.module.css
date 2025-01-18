@@ -35,6 +35,7 @@ body {
   color: hsl(210, 15%, 95%);
   text-align: center;
   font-size: 2.8rem;
+  font-size: clamp(1rem, 2vw, 3rem);
   font-weight: 600;
   margin-bottom: 25px;
   letter-spacing: 2px;
@@ -131,6 +132,7 @@ button.ctaButton:hover {
   color: #a8a8a8;
   text-decoration: none;
   font-size: 48px;
+  font-size: clamp(20px, 5vw, 48px);
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
 }
@@ -182,5 +184,51 @@ button.ctaButton:hover {
   .ctaButton {
     padding: 12px 20px;
     font-size: 0.9rem;
+  }
+}
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .frontPageContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .frontPageTextContainer {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .h1Name {
+    font-size: 2rem;
+  }
+
+  .frontPictureContainer img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+  }
+
+  .socialLinksContainer a {
+    font-size: 36px;
+    margin: 0 10px;
+  }
+}
+
+/* Medium devices (tablets, 576px to 768px) */
+@media (max-width: 768px) {
+  .frontPageContainer {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .frontPageTextContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .socialLinksContainer a {
+    font-size: 40px;
+    margin: 0 12px;
   }
 }
