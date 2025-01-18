@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling entirely if that's acceptable */
+}
+
+#root {
+  height: 100%;
+  overflow-y: auto; /* Allows vertical scrolling only within the React app */
+}
