@@ -3,6 +3,11 @@ import styles from "./About.module.css";
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import { Link } from "react-router-dom";
+import selfieImage from "../../assets/selfie.jpg";
+import pianoImage from "../../assets/piano.png";
+import placeholder from "../../assets/antony.png";
+import surfingImage from "../../assets/surfing.png";
+import cavingImage from "../../assets/caving.png";
 
 const About: React.FC = () => {
   return (
@@ -36,7 +41,7 @@ const About: React.FC = () => {
             </p>
             <div className={styles.introImgContainer}>
               <img
-                src="src/assets/selfie.jpg"
+                src={selfieImage}
                 alt="Picture"
                 className={styles.introImage}
               />
@@ -88,49 +93,49 @@ const About: React.FC = () => {
             <ul>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/piano.png" alt="Piano" />
+                  <img src={pianoImage} alt="Piano" />
                 </div>
                 Piano
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/antony.png" alt="Gym" />
+                  <img src={placeholder} alt="Gym" />
                 </div>
                 Gym
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/antony.png" alt="Boxing" />
+                  <img src={placeholder} alt="Boxing" />
                 </div>
                 Boxing
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/antony.png" alt="Investing" />
+                  <img src={placeholder} alt="Investing" />
                 </div>
                 Investing
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/antony.png" alt="Coding" />
+                  <img src={placeholder} alt="Coding" />
                 </div>
                 Software developing
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/surfing.png" alt="Surfing" />
+                  <img src={surfingImage} alt="Surfing" />
                 </div>
                 Surfing
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/antony.png" alt="Backpacking" />
+                  <img src={placeholder} alt="Backpacking" />
                 </div>
                 Backpacking
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/caving.png" alt="Caving" />
+                  <img src={cavingImage} alt="Caving" />
                 </div>
                 Caving
               </li>
