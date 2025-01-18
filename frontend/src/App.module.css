@@ -2,6 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overscroll-behavior: contain; /* Prevents overscroll effects */
-  background-color: #000; /* Change to your desired color */
+  overscroll-behavior: contain;
+  background-color: #000;
 }
