@@ -94,13 +94,13 @@ const About: React.FC = () => {
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Gym" />
+                  <img src="src/assets/antony.png" alt="Gym" />
                 </div>
                 Gym
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Boxing" />
+                  <img src="src/assets/antony.png" alt="Boxing" />
                 </div>
                 Boxing
               </li>
@@ -124,7 +124,7 @@ const About: React.FC = () => {
               </li>
               <li>
                 <div className={styles.interestImgContainer}>
-                  <img src="src/assets/" alt="Backpacking" />
+                  <img src="src/assets/antony.png" alt="Backpacking" />
                 </div>
                 Backpacking
               </li>

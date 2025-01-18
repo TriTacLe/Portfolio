@@ -50,24 +50,93 @@
 .introImgContainer {
   width: 500px;
   height: 338px;
-  background: hsl(210, 10%, 10%);
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Subtle gradient */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #555;
-  font-size: 16px;
+  position: relative;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
 }
 
+/* Blurry background shapes */
+.introImgContainer::before,
+.introImgContainer::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular shapes */
+  background: linear-gradient(45deg, #f39c12, #f1c40f); /* Vibrant colors */
+  filter: blur(50px); /* Strong blur for fun effect */
+  animation: float 5s ease-in-out infinite; /* Animation */
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Add two shapes with different positions */
+.introImgContainer::before {
+  top: -20px;
+  left: -30px;
+}
+
+.introImgContainer::after {
+  bottom: -20px;
+  right: -30px;
+  animation-delay: 2s; /* Delay for variety */
+}
+
+/* Responsive background */
+@media (max-width: 768px) {
+  .introImgContainer {
+    width: 90%; /* Make it adapt to smaller screens */
+    height: auto;
+    padding: 20px;
+  }
+  .introImgContainer::before,
+  .introImgContainer::after {
+    width: 100px;
+    height: 100px; /* Smaller shapes for smaller screens */
+  }
+}
+
+/* Float animation for shapes */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Keep the image above the background */
 .introImage {
+  position: relative;
+  z-index: 2;
   max-width: 300px;
   max-height: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
-  object-fit: cover; /* Keeps aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  animation: bounce 2s infinite ease-in-out; /* Add fun animation */
 }
+
+/* Bounce animation for the image */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .h1 {
   font-size: 2.5rem;
   color: hsl(210, 15%, 95%);
@@ -124,8 +193,8 @@
 
 .skillCategory {
   border-radius: 10px;
-  background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #152336, #0f1424, #080520);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   color: hsl(210, 10%, 88%);
   padding: 20px;
   padding-top: 0;
@@ -136,12 +205,20 @@
   width: 250px;
   max-width: fit-content;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /*border: 1px solid red;*/
 }
 
+.skillCategory:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #152336, #0f1424, #080520);
+}
 .skillCategory h4 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: hsl(40, 90%, 60%);
+  z-index: 1;
+  position: relative;
 }
 .skillCategory ul {
   display: flex;
@@ -170,6 +247,21 @@
   background: hsl(40, 90%, 60%);
   color: hsl(210, 10%, 10%);
   transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skillCategory {
+    width: 100%;
+    padding: 15px;
+  }
+  .skillCategory ul {
+    gap: 5px;
+  }
+  .skillCategory ul li {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }
 
 .interestSection {
