@@ -16,7 +16,8 @@ const projects = [
   },
   {
     title: "This website",
-    description: "A simple website made using react framework with typescript",
+    description:
+      "A simple website made using react framework with typescript hosted by vercel",
     image: portfolioImage,
     link: "https://github.com/TriTacLe/my-website-project",
   },
