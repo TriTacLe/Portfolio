@@ -9,7 +9,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-//import myImage from "../../assets/frontimg.png";
+//import myImage from "../../assets/intro.png";
 
 interface SocialLink {
   name: string;
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className={styles.frontPictureContainer}>
-          <img src="/assets/frontimg.png" alt="Picture" />
+          <img src="/assets/intro.jpg" alt="Picture" />
         </div>
       </div>
       <div className={styles.mainContent}>
@@ -97,7 +97,7 @@ const Home: React.FC = () => {
           </p>
           <a
             className={styles.ctaBtnEmail}
-            href="mailto:your-email@example.com?subject=Let's%20Connect"
+            href="mailto:tritac.le@gmail.com?subject=Let's%20Connect"
           >
             <button className={styles.ctaButton}>Get in Touch</button>
           </a>{" "}
