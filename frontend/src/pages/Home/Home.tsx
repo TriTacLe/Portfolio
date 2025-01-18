@@ -9,7 +9,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-import myImage from "../../assets/frontimg.jpg";
+//import myImage from "../../assets/frontimg.png";
 
 interface SocialLink {
   name: string;
@@ -81,7 +81,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className={styles.frontPictureContainer}>
-          <img src={myImage} alt="Picture" />
+          <img src="/assets/frontimg.png" alt="Picture" />
         </div>
       </div>
       <div className={styles.mainContent}>
