@@ -1,19 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "../../assets/TriLogo.png";
+//Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faUser, faFolder } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
   const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About me" },
-    { path: "/projects", label: "Projects" },
+    { path: "/", label: "Home", icon: <FontAwesomeIcon icon={faHome} /> },
+    {
+      path: "/about",
+      label: "About me",
+      icon: <FontAwesomeIcon icon={faUser} />,
+    },
+    {
+      path: "/projects",
+      label: "Projects",
+      icon: <FontAwesomeIcon icon={faFolder} />,
+    },
   ];
 
   return (
-    <header className={styles.navbarHeader}>
+    <header
+      className={`${styles.navbarHeader} ${
+        isScrolled ? styles.navbarBlur : ""
+      }`}
+    >
       <img className={styles.logoImage} src={Logo} alt="Logo" />
       <nav className={styles.navbarContainer}>
         <ul className={styles.navbar}>
@@ -25,6 +55,7 @@ const Header: React.FC = () => {
                   location.pathname === link.path ? styles.activeLink : ""
                 }`}
               >
+                {link.icon}
                 {link.label}
               </Link>
             </li>

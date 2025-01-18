@@ -2,20 +2,43 @@ import React from "react";
 import styles from "./Projects.module.css";
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
-import { Link } from "react-router-dom";
 
 const projects = [
   {
     title: "Food waste reduction application",
     description:
-      "Java OOP application that administrates and documents a clients food inventory ",
-    image: "path-to-image1",
-    link: "#",
+      "TUI Java OOP application that administrates and documents a clients food inventory",
+    image: "./src/assets/",
+    link: "https://github.com/NTNU-IDI/idatt1003-mappe-del-1-2024-TriTacLe",
   },
   {
     title: "This website",
     description: "A simple website made using react framework with typescript",
     image: "path-to-image2",
+    link: "#",
+  },
+  {
+    title: "Soon...",
+    description: "Soon...",
+    image: "path-to-image3",
+    link: "#",
+  },
+  {
+    title: "Soon...",
+    description: "Soon...",
+    image: "path-to-image3",
+    link: "#",
+  },
+  {
+    title: "Soon...",
+    description: "Soon...",
+    image: "path-to-image3",
+    link: "#",
+  },
+  {
+    title: "Soon...",
+    description: "Soon...",
+    image: "path-to-image3",
     link: "#",
   },
   {
@@ -43,7 +66,12 @@ const Projects: React.FC = () => {
               <div className={styles.cardContent}>
                 <h2 className={styles.cardTitle}>{project.title}</h2>
                 <p className={styles.cardDescription}>{project.description}</p>
-                <a href={project.link} className={styles.cardButton}>
+                <a
+                  href={project.link}
+                  className={styles.cardButton}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   View Project
                 </a>
               </div>

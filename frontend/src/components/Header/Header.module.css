@@ -1,70 +1,99 @@
+/* General Reset */
 body,
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
-  /*border: 3px solid red;*/
 }
 
+/* Header Container */
 .navbarHeader {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and nav */
   width: 100%;
-  background-color: hsl(0, 0%, 12%);
-  padding: 10px;
-  padding-bottom: 30px;
+  background-color: rgba(18, 18, 18, 0.8);
+  padding: 10px 20px;
   box-sizing: border-box;
-  /*border: solid 1px green;*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.navbarBlur {
+  backdrop-filter: blur(10px); /* Apply blur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow when blurred */
+}
+
+/* Logo Styling */
 .logoImage {
-  align-self: flex-start;
   height: 50px;
   width: 50px;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
+/* Navbar Container */
 .navbarContainer {
-  /*border: solid 1px blue;*/
   display: flex;
-  justify-content: center;
-  background-color: hsl(0, 0%, 12%);
-  width: 100%;
-  padding-top: 20px 0;
-  box-sizing: border-box;
+  justify-content: flex-end; /* Align links to the right */
+  flex-grow: 1;
 }
 
+/* Navbar List */
 .navbar {
   display: flex;
-  width: 55%;
-  justify-content: space-between;
-  margin-top: 13px;
+  gap: 25px;
 }
 
-.navbar ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
+/* Link Styling */
 .navbarLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #a8a8a8;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbarLink:hover {
   color: hsl(0, 0%, 46%);
+  background-color: hsl(0, 0%, 20%);
 }
 
+/* Active Link Styling */
 .activeLink {
   color: hsl(0, 0%, 75%);
   font-weight: bold;
   border-bottom: solid 2px hsl(0, 0%, 55%);
-  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbarHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbarContainer {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbarLink {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
