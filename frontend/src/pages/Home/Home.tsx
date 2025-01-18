@@ -9,7 +9,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-import myImage from "../../assets/frontImg.jpg";
+import myImage from "../../assets/frontimg.jpg";
 
 interface SocialLink {
   name: string;
