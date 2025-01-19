@@ -25,31 +25,31 @@ const projects = [
     title: "Soon...",
     description: "Soon...",
     image: placeholderImage,
-    link: "#",
+    link: "/project",
   },
   {
     title: "Soon...",
     description: "Soon...",
     image: placeholderImage,
-    link: "#",
+    link: "/project",
   },
   {
     title: "Soon...",
     description: "Soon...",
     image: placeholderImage,
-    link: "#",
+    link: "/project",
   },
   {
     title: "Soon...",
     description: "Soon...",
     image: placeholderImage,
-    link: "#",
+    link: "/project",
   },
   {
     title: "Soon...",
     description: "Soon...",
     image: placeholderImage,
-    link: "#",
+    link: "/project",
   },
 ];
 

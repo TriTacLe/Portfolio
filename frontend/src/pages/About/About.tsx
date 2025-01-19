@@ -61,7 +61,6 @@ const About: React.FC = () => {
                   <li>TypeScript</li>
                   <li>Java</li>
                   <li>Python</li>
-                  <li>C++</li>
                 </ul>
               </div>
               <div className={styles.skillCategory}>
