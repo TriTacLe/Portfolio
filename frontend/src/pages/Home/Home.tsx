@@ -2,49 +2,11 @@ import React from "react";
 import styles from "./Home.module.css";
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa";
 import myImage from "../../assets/intro.jpg";
-import { SocialLink } from "../../types/SocialLinks";
+import useSocialLinks from "../../hooks/useSocialLinks.tsx";
 
 const Home: React.FC = () => {
-  const socialLinks: SocialLink[] = [
-    {
-      name: "Facebook",
-      url: "https://www.facebook.com/profile.php?id=100023347819321",
-      icon: <FaFacebookF />,
-      color: "#4267B2",
-    },
-    {
-      name: "Twitter",
-      url: "https://www.twitter.com",
-      icon: <FaTwitter />,
-      color: "#1DA1F2",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/tritacle/",
-      icon: <FaLinkedinIn />,
-      color: "#0077B5",
-    },
-    {
-      name: "Instagram",
-      url: "https://www.instagram.com/tri_le4/",
-      icon: <FaInstagram className={styles.instagramIcon} />,
-      color: "#C13584",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/TriTacLe",
-      icon: <FaGithub />,
-      //color: "#333",
-    },
-  ];
+  const socialLinks = useSocialLinks;
 
   return (
     <div className={styles.homeContainer}>
