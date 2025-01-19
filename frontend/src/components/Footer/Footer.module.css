@@ -124,3 +124,46 @@ h4 {
   transform: scale(1.3);
   color: hsl(210, 15%, 95%);
 }
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerSectionContact,
+  .socialLinksContainer,
+  .footerSectionNavigation {
+    flex: none;
+    border-right: none;
+    padding: 16px 0;
+  }
+
+  .socialLinks {
+    gap: 10px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  .footerSectionContact p,
+  .footerSectionNavigation a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footerContent {
+    gap: 10px;
+  }
+
+  .socialIcon {
+    font-size: 25px;
+  }
+}
