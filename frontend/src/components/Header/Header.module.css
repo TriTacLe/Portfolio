@@ -113,6 +113,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .menuButton {
@@ -122,6 +123,10 @@ li {
   border: none;
   color: white;
   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1100;
 }
 
 .navbarOpen {
@@ -147,6 +152,7 @@ li {
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 100;
+    animation: slideIn 0.3s ease;
   }
 
   .navbar {
@@ -165,6 +171,15 @@ li {
   }
   .menuButton {
     display: block;
+    align-self: flex-end;
+  }
+
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
   }
 }
 @keyframes fadeIn {
@@ -175,5 +190,15 @@ li {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
