@@ -88,7 +88,6 @@
   background: linear-gradient(90deg, #2b1246, #1a4286);
   transform: translateY(-2px) scale(1.05);
 }
-
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;
@@ -104,5 +103,51 @@
 
   .cardTitle {
     font-size: 1rem;
+  }
+
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+
+  .cardButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .projectsContainer {
+    padding: 20px 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 280px;
+  }
+
+  .image {
+    height: 150px;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+
+  .cardButton {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 }
