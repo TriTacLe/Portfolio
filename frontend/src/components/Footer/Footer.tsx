@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
@@ -14,52 +15,61 @@ const Footer: React.FC = () => {
     margin: "0 2px",
     color: "#fff",
   };
+
+  interface SocialLink {
+    platform: string;
+    url: string;
+    icon: JSX.Element;
+    color: string;
+  }
+
+  const socialLinks: SocialLink[] = [
+    {
+      platform: "Facebook",
+      url: "https://facebook.com",
+      icon: <FaFacebookSquare />,
+      color: "#4267B2",
+    },
+    {
+      platform: "Twitter",
+      url: "https://twitter.com",
+      icon: <FaTwitterSquare />,
+      color: "#1DA1F2",
+    },
+    {
+      platform: "LinkedIn",
+      url: "https://linkedin.com",
+      icon: <FaLinkedin />,
+      color: "#0077B5",
+    },
+    {
+      platform: "GitHub",
+      url: "https://github.com",
+      icon: <FaGithubSquare />,
+      color: "#000",
+    },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.socialLinksContainer}>
           <h4>LET'S CONNECT</h4>
           <div className={styles.socialLinks}>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookSquare
-                className={styles.socialIcon}
-                style={{ ...iconStyle, color: "#4267B2" }}
-              />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitterSquare
-                className={styles.socialIcon}
-                style={{ ...iconStyle, color: "#1DA1F2" }}
-              />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin
-                className={styles.socialIcon}
-                style={{ ...iconStyle, color: "#0077B5" }}
-              />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithubSquare
-                className={styles.socialIcon}
-                style={{ ...iconStyle, color: "#000" }}
-              />
-            </a>
+            {socialLinks.map((link) => (
+              <a
+                key={link.platform}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${link.platform}`}
+              >
+                {React.cloneElement(link.icon, {
+                  className: styles.socialIcon,
+                  style: { ...iconStyle, color: link.color },
+                })}
+              </a>
+            ))}
           </div>
         </div>
 
