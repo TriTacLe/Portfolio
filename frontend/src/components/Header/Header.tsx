@@ -53,6 +53,8 @@ const Header: React.FC = () => {
         className={`${styles.navbarContainer} ${
           menuOpen ? styles.navbarOpen : ""
         }`}
+        role="navigation"
+        aria-label="Main navigation"
       >
         <ul className={styles.navbar}>
           {navLinks.map((link) => (
