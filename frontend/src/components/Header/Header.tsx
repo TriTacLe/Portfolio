@@ -5,8 +5,8 @@ import Logo from "../../assets/TriLogo.png";
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
 import navLinks from "../../types/navLinks";
+import { useTheme } from "../../context/ThemeContext";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -29,6 +29,8 @@ const Header: React.FC = () => {
 
   const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <header
       className={`${styles.navbarHeader} ${
@@ -48,7 +50,9 @@ const Header: React.FC = () => {
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
         </button>
       </div>
-
+      <button onClick={toggleTheme}>
+        {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      </button>
       <nav
         className={`${styles.navbarContainer} ${
           menuOpen ? styles.navbarOpen : ""
