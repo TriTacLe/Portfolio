@@ -102,9 +102,30 @@ li {
   font-weight: bold;
   background: linear-gradient(135deg, #32617a, #941919);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 1px solid hsl(0, 58%, 42%);
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/*Hamburger*/
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuButton {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbarOpen {
+  display: flex;
 }
 
 /* Responsive Design */
@@ -115,14 +136,27 @@ li {
   }
 
   .navbarContainer {
-    justify-content: center;
-    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(18, 18, 18, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
   }
 
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  .navbarOpen {
+    display: flex;
   }
 
   .navbarLink {
@@ -142,26 +176,4 @@ li {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/*Hamburger*/
-/* Header Content for Flex Layout */
-.headerContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Hamburger Menu Button */
-.menuButton {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.navbarOpen {
-  display: flex;
 }
