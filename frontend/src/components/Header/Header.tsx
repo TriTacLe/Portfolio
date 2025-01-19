@@ -5,8 +5,8 @@ import Logo from "../../assets/TriLogo.png";
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
 import navLinks from "../../types/navLinks";
+//import { useTheme } from "../../context/ThemeContext";
 
 const Header: React.FC = () => {
   const location = useLocation();
@@ -28,6 +28,8 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
+
+  //const { theme, toggleTheme } = useTheme();
 
   return (
     <header
