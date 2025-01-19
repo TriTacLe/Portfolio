@@ -8,7 +8,7 @@ import pianoImage from "../../assets/piano.png";
 import placeholder from "../../assets/antony.png";
 import surfingImage from "../../assets/surfing.png";
 import cavingImage from "../../assets/caving.png";
-import EmojiRain from "../../components/RainAnimation/RainAnimation";
+import EmojiRain from "../../components/Animation/RainAnimation.tsx";
 
 const About: React.FC = () => {
   return (
