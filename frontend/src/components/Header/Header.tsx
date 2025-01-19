@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "../../assets/TriLogo.png";
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faUser,
-  faFolder,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+import navLinks from "../../types/navLinks";
 
 const Header: React.FC = () => {
   const location = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,21 +27,7 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
-
-  const navLinks = [
-    { path: "/", label: "Home", icon: <FontAwesomeIcon icon={faHome} /> },
-    {
-      path: "/about",
-      label: "About me",
-      icon: <FontAwesomeIcon icon={faUser} />,
-    },
-    {
-      path: "/projects",
-      label: "Projects",
-      icon: <FontAwesomeIcon icon={faFolder} />,
-    },
-  ];
+  const toggleMenu = useCallback(() => setMenuOpen((prev) => !prev), []);
 
   return (
     <header
@@ -71,6 +53,8 @@ const Header: React.FC = () => {
         className={`${styles.navbarContainer} ${
           menuOpen ? styles.navbarOpen : ""
         }`}
+        role="navigation"
+        aria-label="Main navigation"
       >
         <ul className={styles.navbar}>
           {navLinks.map((link) => (
