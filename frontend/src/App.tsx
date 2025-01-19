@@ -5,16 +5,19 @@ import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 //import Personal from "./pages/Personal/Personal";
 import styles from "./App.module.css";
+import ErrorBoundary from "./utils/ErrorBoundary";
 
 const App: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </ErrorBoundary>
       </Router>
     </div>
   );
