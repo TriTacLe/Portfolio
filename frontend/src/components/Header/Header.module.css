@@ -39,7 +39,7 @@ li {
   }
 }
 
-/* Logo Styling */
+/*Logo*/
 .logoImage {
   height: 50px;
   width: 50px;
@@ -64,8 +64,9 @@ li {
 /* Navbar Container */
 .navbarContainer {
   display: flex;
-  justify-content: flex-end; /* Align links to the right */
+  justify-content: flex-end;
   flex-grow: 1;
+  top: 60px;
 }
 
 /* Navbar List */
@@ -74,7 +75,7 @@ li {
   gap: 25px;
 }
 
-/* Link Styling */
+/* Link*/
 .navbarLink {
   display: flex;
   align-items: center;
@@ -128,6 +129,9 @@ li {
     font-size: 16px;
     padding: 10px;
   }
+  .menuButton {
+    display: block;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -138,4 +142,26 @@ li {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/*Hamburger*/
+/* Header Content for Flex Layout */
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hamburger Menu Button */
+.menuButton {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbarOpen {
+  display: flex;
 }
