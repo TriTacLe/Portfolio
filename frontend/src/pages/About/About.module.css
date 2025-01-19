@@ -32,6 +32,7 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 30px; /* Adds more spacing between the image and text */
+  height: 50%;
 }
 
 .introP {
@@ -298,8 +299,11 @@ header {
   object-fit: cover;
   border-radius: 5px;
   background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+.interestImgContainer img {
+  border-radius: 10px;
 }
 
 .cta {
@@ -446,5 +450,122 @@ header {
   .ctaButton {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  header {
+    width: 100%;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  }
+
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .content {
+    margin: 80px auto;
+    padding: 50px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #1a1a2e, #1f4068, #16213e);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    width: 85%;
+  }
+
+  .introContent {
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .introP {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding: 30px;
+    max-width: 65%;
+    background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  }
+
+  .skills {
+    margin: 80px 0;
+  }
+
+  .skillGrid {
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .techSkillsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+  }
+
+  .skillCategory {
+    padding: 30px;
+    width: 300px;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, #152336, #0f1424, #080520);
+  }
+
+  .skillCategory ul li {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .interestContainer {
+    margin: 80px 0;
+    padding: 50px;
+    background: linear-gradient(135deg, #1a1a2e, #1f2a37, #16213e);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .interestContainer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+
+  /*.interestImgContainer {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  }*/
+
+  .ctaContainer {
+    max-width: 1000px;
+    padding: 50px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1a1a2e, #1f2a37, #020306);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .ctaButton {
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ctaButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   }
 }
