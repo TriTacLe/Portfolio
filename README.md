@@ -16,6 +16,7 @@ Tritacle.no is a modern and responsive website built using React and TypeScript,
 - **Hosting**: Vercel
 - **CSS**: Styled Components / CSS Modules
 - **Build Tool**: Vite / Create React App / Next.js
+- **UX/UI design tools**: Canva and Figma
 
 ## Installation
 
