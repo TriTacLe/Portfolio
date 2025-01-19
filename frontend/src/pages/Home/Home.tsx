@@ -10,13 +10,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import myImage from "../../assets/intro.jpg";
-
-interface SocialLink {
-  name: string;
-  url: string;
-  icon: JSX.Element;
-  color?: string;
-}
+import { SocialLink } from "../../types/SocialLinks";
 
 const Home: React.FC = () => {
   const socialLinks: SocialLink[] = [
