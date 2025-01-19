@@ -8,16 +8,14 @@ Tritacle.no is a modern and responsive website built using React and TypeScript,
 - **Responsive Design**: Fully responsive layout that looks great on desktops, tablets, and mobile devices.
 - **Vercel Hosting**: Hosted on Vercel for fast and reliable performance with automated deployments.
 - **Modern UI**: Clean and modern user interface for an intuitive browsing experience.
-- **SEO Friendly**: Optimized for search engines with proper meta tags and structure.
 
 ## Tech Stack
 
 - **Framework**: React
 - **Language**: TypeScript
 - **Hosting**: Vercel
-- **CSS**: Styled Components / TailwindCSS / CSS Modules (mention the one you used)
-- **Build Tool**: Vite / Create React App / Next.js (mention the one you used)
-- **State Management**: Context API / Redux / Zustand (mention if applicable)
+- **CSS**: Styled Components / CSS Modules
+- **Build Tool**: Vite / Create React App / Next.js
 
 ## Installation
 
@@ -108,13 +106,9 @@ We welcome contributions! To contribute:
    git push origin feature-name
    ```
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ## Contact
 
-For questions or feedback, please reach out at [your-email@example.com](mailto:your-email@example.com).
+For questions or feedback, please reach out at [tritac.le@gmail.com](mailto:tritac.le@gmail.com).
 
 ---
 
