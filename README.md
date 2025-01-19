@@ -31,7 +31,7 @@ Follow these steps to set up the project locally:
 2. Navigate to the project directory:
 
    ```bash
-   cd tritacle.no
+   cd frontend
    ```
 
 3. Install dependencies:
