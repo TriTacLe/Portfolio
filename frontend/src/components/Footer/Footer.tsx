@@ -50,12 +50,27 @@ const Footer: React.FC = () => {
     },
   ];
 
+  interface SiteLink {
+    path: string;
+    label: string;
+  }
+
+  const siteLinks: SiteLink[] = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/projects", label: "Projects" },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.socialLinksContainer}>
           <h4>LET'S CONNECT</h4>
-          <div className={styles.socialLinks}>
+          <div
+            className={styles.socialLinks}
+            role="navigation"
+            aria-label="Social links"
+          >
             {socialLinks.map((link) => (
               <a
                 key={link.platform}
@@ -85,15 +100,11 @@ const Footer: React.FC = () => {
         <div className={styles.footerSectionNavigation}>
           <h4>SITE LINKS</h4>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
+            {siteLinks.map((link) => (
+              <li key={link.path}>
+                <Link to={link.path}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
