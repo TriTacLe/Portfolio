@@ -8,12 +8,13 @@ import pianoImage from "../../assets/piano.png";
 import placeholder from "../../assets/antony.png";
 import surfingImage from "../../assets/surfing.png";
 import cavingImage from "../../assets/caving.png";
+import EmojiRain from "../../components/RainAnimation/RainAnimation";
 
 const About: React.FC = () => {
   return (
     <div className={styles.container}>
       <Header />
-
+      <EmojiRain />
       <div className={styles.content}>
         <section className={styles.intro}>
           <h1 className={styles.h1}>Who am I?</h1>
