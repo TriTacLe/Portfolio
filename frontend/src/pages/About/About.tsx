@@ -81,7 +81,6 @@ const About: React.FC = () => {
                 <h4>Networking</h4>
                 <ul>
                   <li>Wireshark</li>
-                  <li>OSI Model</li>
                 </ul>
               </div>
             </div>
