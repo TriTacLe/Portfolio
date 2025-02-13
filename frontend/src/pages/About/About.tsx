@@ -35,7 +35,7 @@ const About: React.FC = () => {
               hands-on experience in various fields.{" "}
               <Link
                 className={styles.CVlink}
-                to="https://docs.google.com/document/d/1NhuRIhe-wEkKiCUD4MJ_VO8M5Xzm3Pzq1qL8cCCWRpk/edit?usp=sharing"
+                to="https://drive.google.com/file/d/1cde-6yZuJah2yQEjMxl1escoeMMtF5vq/view?usp=sharing"
               >
                 <strong>Link to My CV</strong>
               </Link>
