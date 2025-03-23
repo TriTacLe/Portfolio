@@ -6,6 +6,7 @@ import Projects from "./pages/Projects/Projects";
 //import Personal from "./pages/Personal/Personal";
 import styles from "./App.module.css";
 import ErrorBoundary from "./utils/ErrorBoundary";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           </Routes>
         </ErrorBoundary>
       </Router>
+      <Analytics />
     </div>
   );
 };
