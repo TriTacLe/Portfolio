@@ -3,12 +3,13 @@ import styles from "./About.module.css";
 import Header from "../../components/Header/Header.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 import { Link } from "react-router-dom";
-import selfieImage from "../../assets/selfie.jpg";
+//import selfieImage from "../../assets/selfie.jpg";
 import pianoImage from "../../assets/piano.png";
 import placeholder from "../../assets/antony.png";
 import surfingImage from "../../assets/surfing.png";
 import cavingImage from "../../assets/caving.png";
 import EmojiRain from "../../components/Animation/RainAnimation.tsx";
+import orbitImg from "../../assets/orbitImg.jpg";
 
 const About: React.FC = () => {
   return (
@@ -42,11 +43,7 @@ const About: React.FC = () => {
               </Link>
             </p>
             <div className={styles.introImgContainer}>
-              <img
-                src={selfieImage}
-                alt="Picture"
-                className={styles.introImage}
-              />
+              <img src={orbitImg} alt="Picture" className={styles.introImage} />
             </div>
           </div>
         </section>
